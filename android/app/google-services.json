@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "241310223127",
+    "firebase_url": "https://unscrambler-71154.firebaseio.com",
+    "project_id": "unscrambler-71154",
+    "storage_bucket": "unscrambler-71154.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:241310223127:android:5dd2eea74469da94",
+        "android_client_info": {
+          "package_name": "com.spchen.unscrambler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "241310223127-2j11bpc3pk30kl1r0ru2cufd4fa6a6ut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDU2VYKEiHGnWPlQyKb9mp3SD4max1aNuk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
