@@ -29,6 +29,7 @@ class Ads {
 
   static void init(
     String appId,
+    String adUnitId,
     {List<String> keywords,
     String contentUrl,
     DateTime birthday,
@@ -42,6 +43,7 @@ class Ads {
     assert(appId != null, 'Ads.init(): appId is required.');
     /// Redundancy with the assert, but kept if again made optional.
     _appId = appId == null ? FirebaseAdMob.testAppId : appId;
+    _adUnitId = adUnitId == null ?  FirebaseAdMob.testAppId : adUnitId;
     /// Some keywords have to be provided if not passed int.
     _keywords = keywords == null ? ['foo', 'bar'] : keywords;
     _contentUrl = contentUrl;
@@ -60,7 +62,9 @@ class Ads {
   }
 
   static String _appId;
+  static String _adUnitId;
   static get appId => _appId;
+  static get adUnitId => _adUnitId;
 
   static List<String> _keywords;
   static get keywords => _keywords;
@@ -99,6 +103,7 @@ class Ads {
     }
   }
 
+  static get bannerAd => _bannerAd;
   static bool testing;
 
   static BannerAd _bannerAd;
@@ -158,7 +163,7 @@ class Ads {
     if(listener != null) banner._eventListeners.add(listener);
 
     _bannerAd = BannerAd(
-      adUnitId:  Ads.testing ? BannerAd.testAdUnitId : Ads._appId,
+      adUnitId:  Ads.testing ? BannerAd.testAdUnitId : Ads._adUnitId,
       size: size,
       targetingInfo: info,
       listener: banner._eventListener,
